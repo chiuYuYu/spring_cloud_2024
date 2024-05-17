@@ -119,13 +119,23 @@ logging:
 #      cloud-payment-service:
 #        base-config: default
 
-resilience4j:
-  ratelimiter:
-    configs:
-      default:
-        limit-for-period: 2
-        limit-refresh-period: 1s
-        timeout-duration: 1
-    instances:
-      cloud-payment-service:
-        base-config: default
+
+#resilience4j 限流
+#resilience4j:
+#  ratelimiter:
+#    configs:
+#      default:
+#        limit-for-period: 2
+#        limit-refresh-period: 1s
+#        timeout-duration: 1
+#    instances:
+#      cloud-payment-service:
+#        base-config: default
+# ========================zipkin===================
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans #zipkin接收端口地址
+  tracing:
+    sampling:
+      probability: 1.0 #默認0.1(0.1表示10次僅有一次被記錄下來)，值越大收集越即時。
