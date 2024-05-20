@@ -4,26 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd01c717-dccd-4bdf-b0d9-eb2625f2f296" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/chiu/cloud/controller/OrderMicrometerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/Controller/PayMicrometerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-payment8002/src/main/java/com/chiu/cloud/Controller/PayMicrometerController.java" afterDir="false" />
+    <list default="true" id="dd01c717-dccd-4bdf-b0d9-eb2625f2f296" name="Changes" comment="新增鏈路追蹤配置及測試方法">
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/chiu/cloud/controller/OrderGatewayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/chiu/cloud/Main9527.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/chiu/cloud/config/MyRoutePredicateFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/Controller/PayGatewayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-commons/cloud-api-commons.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/chiu/cloud/apis/PayFeignApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/chiu/cloud/apis/PayFeignApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/chiu/cloud/apis/PayFeignApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/chiu/cloud/apis/PayFeignApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/cloud-consumer-order80.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/cloud-provider-payment8001.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8002/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8002/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis_generator2024/mybatis_generator2024.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +72,7 @@
     "project.structure.proportion": "0.15332031",
     "project.structure.side.proportion": "0.37182447",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "73af925be8c0ed72c1e5a0bfe8eeffe0"
+    "spring.configuration.checksum": "c3b688c3a80f65f7fb9ffbfd27efb2da"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -105,13 +98,13 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MainOpenFeign80">
-    <configuration name="ReturnCodeEnum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.chiu.cloud.resp.ReturnCodeEnum" />
-      <module name="cloud-provider-payment8001" />
+  <component name="RunManager" selected="Spring Boot.Main9527">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chiu.cloud.main" />
+      <module name="cloud-api-commons" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chiu.cloud.resp.*" />
+          <option name="PATTERN" value="com.chiu.cloud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,6 +151,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main9527" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-gateway9527" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.Main9527" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chiu.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainOpenFeign80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-consumer-feign-order80" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.MainOpenFeign80" />
@@ -165,12 +171,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.main" />
+      <item itemvalue="Spring Boot.MainOpenFeign80" />
+      <item itemvalue="Spring Boot.Main8001" />
+      <item itemvalue="Spring Boot.Main80" />
+      <item itemvalue="Spring Boot.Main8002" />
+      <item itemvalue="Spring Boot.Main9527" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Main9527" />
         <item itemvalue="Spring Boot.Main8001" />
+        <item itemvalue="Application.main" />
         <item itemvalue="Spring Boot.Main8002" />
         <item itemvalue="Spring Boot.Main80" />
-        <item itemvalue="Application.ReturnCodeEnum" />
       </list>
     </recent_temporary>
   </component>
@@ -193,8 +208,17 @@
       <workItem from="1715527199811" duration="6924000" />
       <workItem from="1715818511988" duration="14140000" />
       <workItem from="1715902627252" duration="1790000" />
-      <workItem from="1715906204063" duration="3780000" />
+      <workItem from="1715906204063" duration="20084000" />
+      <workItem from="1716167046307" duration="5802000" />
     </task>
+    <task id="LOCAL-00001" summary="新增鏈路追蹤配置及測試方法">
+      <created>1715912005823</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715912005823</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,5 +234,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增鏈路追蹤配置及測試方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增鏈路追蹤配置及測試方法" />
   </component>
 </project>

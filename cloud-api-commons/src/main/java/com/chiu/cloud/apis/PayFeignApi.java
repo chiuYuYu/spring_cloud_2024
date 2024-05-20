@@ -1,5 +1,6 @@
 package com.chiu.cloud.apis;
 
+import cn.hutool.core.util.IdUtil;
 import com.chiu.cloud.entities.PayDTO;
 import com.chiu.cloud.resp.ResultData;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -17,8 +18,10 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @Create 2024/5/5 下午 10:33
  * @Version 1.0
  */
-@FeignClient("cloud-payment-service")
+//@FeignClient("cloud-payment-service")
+@FeignClient("cloud-gateway")
 public interface PayFeignApi {
+
     @PostMapping(value = "/pay/add")
     ResultData addPay(@RequestBody PayDTO payDTO);
 
@@ -39,4 +42,11 @@ public interface PayFeignApi {
 
     @GetMapping("/pay/micrometer/{id}")
     String myMicrometer(@PathVariable("id") Integer id);
+
+
+    @GetMapping(value = "/pay/gateway/get/{id}")
+    ResultData gatewayGetById(@PathVariable("id") Integer id);
+
+    @GetMapping(value = "/pay/gateway/info")
+    ResultData<String> getGatewayInfo();
 }

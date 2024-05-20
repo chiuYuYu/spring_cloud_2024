@@ -1,0 +1,55 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        prefer-ip-address: true
+    gateway:
+      routes:
+        - id: pay_routh1 #pay_routh1                #路由的ID(類似mysql主鍵ID)，沒有固定規則但要求唯一，建議配合服務名
+#          uri: http://localhost:8001                #匹配後提供服務的路由位址
+          uri: lb://cloud-payment-service
+          predicates:
+            - Path=/pay/gateway/get/**              # 斷言，路徑相符的進行路由
+            - After=2024-05-17T14:23:22.674856900+08:00[GMT+08:00]
+            - Method=GET
+#            - name: My
+#              args:
+#                userType: diamond
+#            - My=diamond
+#            - RemoteAddr=192.168.56.1/24
+#            - Cookie=username,chiu
+#            - Header=X-Request-Id, \d+
+#            - Host=**.chiu.com
+#            - Query=username, \d+
+        - id: pay_routh2 #pay_routh2                #路由的ID(类似mysql主键ID)，没有固定規则但要求唯一，建议配合服務名
+          uri: lb://cloud-payment-service               #匹配后提供服务的路由地址
+          predicates:
+            - Path=/pay/gateway/info/**              # 断言，路徑相匹配的進行路由
+#            - Between=2024-05-17T14:28:22.674856900+08:00[GMT+08:00],2024-05-17T14:30:22.674856900+08:00[GMT+08:00]
+
+        - id: pay_routh3
+          uri: lb://cloud-payment-service
+          predicates:
+            - Path=/pay/gateway/filter/**            # 真實地址
+#            - Path=/gateway/filter/**                #配合PrefixPath+Path
+#            - Path=/XYZ/abc/{segment}                 #配合SetPath測試，{segment}的內容被SetPath取代
+          filters:
+            - RedirectTo=302,https://github.com/
+#            - SetPath=/pay/gateway/{segment}          #{segment}為路徑輸入值
+#            - PrefixPath=/pay                         #路由前綴
+#            - AddRequestHeader=X-Request-chiu1,chiu1 #新增請求頭KV,若一頭含有多個參數則重寫一行設置
+#            - AddRequestHeader=X-Request-chiu2,chiu2
+#            - RemoveRequestHeader=sec-fetch-site     #刪除請求頭
+#            - SetRequestHeader=sec-ch-ua-mobile,100  #修改請求頭sec-ch-ua-mobile為100
+#            - AddRequestParameter=customerId,9527    #新增請求參數KV(Parameter)
+#            - RemoveRequestParameter=customerName    #刪除請求參數
+#            - AddResponseHeader=X-Response-chiu,BlueResponse #設置回應頭KV
+#            - SetResponseHeader=Date,2099-11-11      #修改回應頭Date
+#            - RemoveResponseHeader=Content-Type      #刪除回應頭
