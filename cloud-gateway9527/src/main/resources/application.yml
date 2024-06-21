@@ -41,7 +41,7 @@ spring:
 #            - Path=/gateway/filter/**                #配合PrefixPath+Path
 #            - Path=/XYZ/abc/{segment}                 #配合SetPath測試，{segment}的內容被SetPath取代
           filters:
-            - RedirectTo=302,https://github.com/
+#            - RedirectTo=302,https://github.com/
 #            - SetPath=/pay/gateway/{segment}          #{segment}為路徑輸入值
 #            - PrefixPath=/pay                         #路由前綴
 #            - AddRequestHeader=X-Request-chiu1,chiu1 #新增請求頭KV,若一頭含有多個參數則重寫一行設置
@@ -53,3 +53,4 @@ spring:
 #            - AddResponseHeader=X-Response-chiu,BlueResponse #設置回應頭KV
 #            - SetResponseHeader=Date,2099-11-11      #修改回應頭Date
 #            - RemoveResponseHeader=Content-Type      #刪除回應頭
+            - My=chiu

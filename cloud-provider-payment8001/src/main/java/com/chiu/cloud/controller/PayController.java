@@ -1,6 +1,5 @@
-package com.chiu.cloud.Controller;
+package com.chiu.cloud.controller;
 
-import ch.qos.logback.core.util.TimeUtil;
 import com.chiu.cloud.entities.Pay;
 import com.chiu.cloud.entities.PayDTO;
 import com.chiu.cloud.resp.ResultData;
@@ -13,7 +12,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.GeneralSecurityException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -88,4 +86,14 @@ public class PayController {
     public String getInFoByConsul(@Value("${chiu.info}")String s){
         return "chiu_Info:"+s+"\t port:"+port;
     }
+
+    @PostMapping("pay/get/info/test333")
+    public String test(@RequestBody  String s){
+        System.out.println(s);
+        return s;
+    }
+
+
+
+
 }

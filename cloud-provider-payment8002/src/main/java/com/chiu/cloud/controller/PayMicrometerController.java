@@ -1,4 +1,4 @@
-package com.chiu.cloud.Controller;
+package com.chiu.cloud.controller;
 
 import cn.hutool.core.util.IdUtil;
 import org.springframework.beans.factory.annotation.Value;

@@ -4,18 +4,82 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd01c717-dccd-4bdf-b0d9-eb2625f2f296" name="Changes" comment="新增鏈路追蹤配置及測試方法">
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/chiu/cloud/controller/OrderGatewayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/chiu/cloud/Main9527.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/chiu/cloud/config/MyRoutePredicateFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/Controller/PayGatewayController.java" afterDir="false" />
+    <list default="true" id="dd01c717-dccd-4bdf-b0d9-eb2625f2f296" name="Changes" comment="新增gateway網關配置">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/chiu/cloud/apis/PayFeignApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/chiu/cloud/apis/PayFeignApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/chiu/cloud/apis/PayFeignApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/chiu/cloud/apis/PayFeignApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/chiu/cloud/apis/PayFeignApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/chiu/cloud/entities/PayDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/chiu/cloud/exp/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/chiu/cloud/resp/ResultData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/chiu/cloud/resp/ReturnCodeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/cloud-api-commons-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/target/classes/com/chiu/cloud/MainOpenFeign80.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/target/classes/com/chiu/cloud/config/FeignConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/target/classes/com/chiu/cloud/controller/OrderCircuitController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/target/classes/com/chiu/cloud/controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/chiu/cloud/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/chiu/cloud/config/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/chiu/cloud/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/chiu/cloud/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/target/classes/com/chiu/cloud/Main80.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/target/classes/com/chiu/cloud/config/RestTemplateConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/target/classes/com/chiu/cloud/controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/chiu/cloud/filter/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/chiu/cloud/filter/MyFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/chiu/cloud/filter/MyGatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/chiu/cloud/filter/MyGatewayFilterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway9527/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/controller/PayCircuitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/controller/PayCircuitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/controller/PayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/controller/PayGatewayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/controller/PayGatewayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/controller/PayMicrometerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/chiu/cloud/controller/PayMicrometerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/chiu/cloud/Controller/PayCircuitController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/chiu/cloud/Controller/PayController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/chiu/cloud/Main8001.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/chiu/cloud/config/Swagger3Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/chiu/cloud/entities/Pay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/chiu/cloud/mapper/PayMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/chiu/cloud/service/PayService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/chiu/cloud/service/impl/PayServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/mapper/PayMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/src/main/java/com/chiu/cloud/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8002/src/main/java/com/chiu/cloud/controller/PayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/src/main/java/com/chiu/cloud/controller/PayMicrometerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8002/src/main/java/com/chiu/cloud/controller/PayMicrometerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/com/chiu/cloud/Controller/PayController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/com/chiu/cloud/Main8002.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/com/chiu/cloud/config/Swagger3Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/com/chiu/cloud/entities/Pay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/com/chiu/cloud/mapper/PayMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/com/chiu/cloud/service/PayService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/com/chiu/cloud/service/impl/PayServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/mapper/PayMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/java/com/chiu/cloud/Main3377.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/java/com/chiu/cloud/Main3377.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/java/com/chiu/cloud/controller/NacosConfigClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/java/com/chiu/cloud/controller/NacosConfigClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/chiu/cloud/Main83.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/chiu/cloud/Main83.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/chiu/cloud/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/chiu/cloud/config/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/chiu/cloud/controller/OrderNacosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/chiu/cloud/controller/OrderNacosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/java/com/chiu/cloud/Main9001.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/java/com/chiu/cloud/Main9001.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/java/com/chiu/cloud/controller/PayAlibabaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/java/com/chiu/cloud/controller/PayAlibabaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/chiu/cloud/Main8401.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/chiu/cloud/Main8401.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/chiu/cloud/controller/FlowLimitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/chiu/cloud/controller/FlowLimitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/chiu/cloud/controller/RateLimitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/chiu/cloud/controller/RateLimitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/chiu/cloud/service/FlowLimitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/chiu/cloud/service/FlowLimitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +91,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -61,6 +126,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17.0.1",
     "last_opened_file_path": "D:/專題工作區/SpringCloud2024_04_30/cloud2024/mybatis_generator2024/pom.xml",
@@ -71,8 +137,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15332031",
     "project.structure.side.proportion": "0.37182447",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "c3b688c3a80f65f7fb9ffbfd27efb2da"
+    "settings.editor.selected.configurable": "editing.templates",
+    "spring.configuration.checksum": "aba90b16f954b8889699400addd1e895"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -97,11 +163,12 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="Spring Boot.Main9527">
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.chiu.cloud.main" />
-      <module name="cloud-api-commons" />
+  <component name="RunManager" selected="Spring Boot.Main8401">
+    <configuration name="model" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chiu.cloud.model" />
+      <module name="cloud-consumer-order80" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.chiu.cloud.*" />
@@ -112,35 +179,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chiu.cloud.test" />
+      <module name="mybatis_generator2024" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chiu.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main3377" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloudalibaba-config-nacos-client3377" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.Main3377" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chiu.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-consumer-order80" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.Main80" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chiu.cloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="Main8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-provider-payment8001" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.Main8001" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chiu.cloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="Main8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-provider-payment8002" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.Main8002" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main8401" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloudalibaba-sentinel-service8401" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.Main8401" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.chiu.cloud.*" />
@@ -151,15 +239,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main9527" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-gateway9527" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.Main9527" />
+    <configuration name="Main9002 copy from 9001  " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <option name="ACTIVE_PROFILES" />
+      <module name="cloudalibaba-provider-payment9001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.Main9001" />
+      <option name="VM_PARAMETERS" value="-DServer.port=9002" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.chiu.cloud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main9527" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-gateway9527" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chiu.cloud.Main9527" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,20 +269,24 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.main" />
-      <item itemvalue="Spring Boot.MainOpenFeign80" />
+      <item itemvalue="Application.test" />
+      <item itemvalue="Application.model" />
       <item itemvalue="Spring Boot.Main8001" />
-      <item itemvalue="Spring Boot.Main80" />
       <item itemvalue="Spring Boot.Main8002" />
       <item itemvalue="Spring Boot.Main9527" />
+      <item itemvalue="Spring Boot.MainOpenFeign80" />
+      <item itemvalue="Spring Boot.Main80" />
+      <item itemvalue="Spring Boot.Main8401" />
+      <item itemvalue="Spring Boot.Main3377" />
+      <item itemvalue="Spring Boot.Main9002 copy from 9001  " />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Main9527" />
-        <item itemvalue="Spring Boot.Main8001" />
-        <item itemvalue="Application.main" />
-        <item itemvalue="Spring Boot.Main8002" />
-        <item itemvalue="Spring Boot.Main80" />
+        <item itemvalue="Spring Boot.Main8401" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.model" />
+        <item itemvalue="Spring Boot.Main3377" />
+        <item itemvalue="Spring Boot.Main9002 copy from 9001  " />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +310,28 @@
       <workItem from="1715818511988" duration="14140000" />
       <workItem from="1715902627252" duration="1790000" />
       <workItem from="1715906204063" duration="20084000" />
-      <workItem from="1716167046307" duration="5802000" />
+      <workItem from="1716167046307" duration="6319000" />
+      <workItem from="1716251555389" duration="3081000" />
+      <workItem from="1716337629931" duration="14791000" />
+      <workItem from="1716511443305" duration="5545000" />
+      <workItem from="1716611913009" duration="6910000" />
+      <workItem from="1716724691249" duration="1757000" />
+      <workItem from="1716767177608" duration="6623000" />
+      <workItem from="1716847977933" duration="2051000" />
+      <workItem from="1716948981725" duration="1307000" />
+      <workItem from="1717026005180" duration="1228000" />
+      <workItem from="1717113088166" duration="4053000" />
+      <workItem from="1717285293639" duration="701000" />
+      <workItem from="1717373287674" duration="3560000" />
+      <workItem from="1717467833472" duration="9748000" />
+      <workItem from="1717546043266" duration="5396000" />
+      <workItem from="1717630892462" duration="1803000" />
+      <workItem from="1718248883814" duration="1122000" />
+      <workItem from="1718583870005" duration="1200000" />
+      <workItem from="1718768058570" duration="5437000" />
+      <workItem from="1718832597784" duration="599000" />
+      <workItem from="1718849177276" duration="6433000" />
+      <workItem from="1718926635091" duration="6648000" />
     </task>
     <task id="LOCAL-00001" summary="新增鏈路追蹤配置及測試方法">
       <created>1715912005823</created>
@@ -218,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715912005823</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="新增gateway網關配置">
+      <created>1716195169894</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716195169895</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +366,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增鏈路追蹤配置及測試方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增鏈路追蹤配置及測試方法" />
+    <MESSAGE value="新增gateway網關配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增gateway網關配置" />
   </component>
 </project>

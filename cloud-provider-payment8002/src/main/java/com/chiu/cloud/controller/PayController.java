@@ -1,4 +1,4 @@
-package com.chiu.cloud.Controller;
+package com.chiu.cloud.controller;
 
 import com.chiu.cloud.entities.Pay;
 import com.chiu.cloud.entities.PayDTO;
@@ -12,7 +12,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.GeneralSecurityException;
 import java.util.List;
 
 /**

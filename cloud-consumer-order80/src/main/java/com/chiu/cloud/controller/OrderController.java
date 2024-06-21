@@ -3,13 +3,23 @@ package com.chiu.cloud.controller;
 
 import com.chiu.cloud.entities.PayDTO;
 import com.chiu.cloud.resp.ResultData;
+import com.nimbusds.jose.shaded.json.JSONArray;
+import com.nimbusds.jose.shaded.json.JSONObject;
+import com.nimbusds.jose.util.JSONArrayUtils;
+import com.nimbusds.jose.util.JSONObjectUtils;
 import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.autoconfigure.web.client.RestClientAutoConfiguration;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.client.RestTemplate;
+
+import java.nio.charset.StandardCharsets;
+import java.text.ParseException;
+import java.util.List;
 
 /**
  * ClassName:OrderController
@@ -41,6 +51,15 @@ public class OrderController {
     @GetMapping(value = "/consumer/pay/get/info")
     public String getInfo(){
         return   restTemplate.getForObject(PaymentSrv_URL+"/pay/get/info",String.class);
+    }
+
+    @PostMapping (value = "/consumer/pay/get/info/test333")
+    public ResponseEntity<String> addOrder(HttpEntity<String> requestBody) throws ParseException {
+        System.out.println("v2");
+
+        ResponseEntity<String> url = restTemplate.postForEntity(PaymentSrv_URL+"/pay/get/info/test333",requestBody, String.class);
+        ResponseEntity<String> stringResponseEntity = new ResponseEntity<>(url.getBody(), HttpStatus.OK);
+        return  stringResponseEntity;
     }
 
 }
